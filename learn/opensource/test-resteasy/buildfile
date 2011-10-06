@@ -1,0 +1,37 @@
+#require 'buildr/scala'
+repositories.remote << 'http://repo1.maven.org/maven2' <<
+						'http://repository.jboss.org/nexus/content/groups/public' <<
+						'http://scannotation.sf.net/maven2'
+
+#DBPOOL = 'net.snaq:dbpool:jar:4.8.3'
+#download artifact(DBPOOL) => 'http://www.snaq.net/java/DBPool/DBPool_v4.8.3.zip'
+
+RESTEASY_VERSION = '2.0.1.GA'
+	
+Project.local_task :run
+define 'test-resteasy' do
+	project.version = '0.0.1'
+	project.group = 'me.itang.test'
+	
+	compile.using :source => '1.6', :target => '1.6', :other => %w[-encoding UTF-8]
+	
+	compile.with 'com.google.guava:guava:jar:r09'
+	%w[resteasy-jaxrs resteasy-links 
+		resteasy-jaxb-provider resteasy-jettison-provider 
+		resteasy-multipart-provider resteasy-cache-core 
+		resteasy-yaml-provider resteasy-atom-provider abdera-atom-provider 
+		resteasy-spring resteasy-guice async-http-jbossweb 
+		async-http-servlet-3.0 async-http-tomcat6].each do |artifactId|
+		compile.with transitive("org.jboss.resteasy:#{artifactId}:jar:#{RESTEASY_VERSION}")
+	end
+	compile.with 'javax.servlet:servlet-api:jar:2.5'
+	
+	test.with 'junit:junit:jar:4.8.2'
+	
+	package :war
+	
+	task :run => :compile do
+    	system 'mvn clean jetty:run'
+ 	end
+end
+

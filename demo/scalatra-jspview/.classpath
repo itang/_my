@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<classpath>
+<classpathentry kind="src" path="src/test/scala" output="target/scala_2.8.1/test-classes" including="**/*.scala" />
+<classpathentry kind="src" path="src/main/scala" including="**/*.scala" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/servlet-api-2.5-20081211.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/servlet-api-2.5-20081211.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/scalatra_2.8.1-2.0.0.M2.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/jstl-1.2.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/scalate-core-1.3.1.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/jetty-util-6.1.25.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/runtime/logback-core-0.9.25.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/runtime/slf4j-api-1.6.0.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/scalatra-test_2.8.1-2.0.0.M2.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/slf4j-api-1.6.0.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/ant-1.6.5.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/jetty-6.1.25.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/scalatra-scalate_2.8.1-2.0.0.M2.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/junit-4.8.1.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/ecj-3.5.1.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/jsp-2.1-glassfish-2.1.v20091210.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/scalatest-1.2.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/jsp-api-2.1-glassfish-2.1.v20091210.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/jetty-servlet-tester-6.1.22.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/runtime/logback-classic-0.9.25.jar" />
+<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/scalatra-scalatest_2.8.1-2.0.0.M2.jar" />
+<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER" />
+<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" />
+<classpathentry kind="output" path="target/scala_2.8.1/classes" />
+</classpath>

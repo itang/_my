@@ -1,0 +1,7 @@
+mvn deploy:deploy-file -DgroupId=org.eclipse.jdt        \
+                       -DartifactId=org.eclipse.jdt.core   \
+                       -Dversion=3.6.0        \
+                       -Dfile=org.eclipse.jdt.core_3.6.0.jar        \
+                       -Dpackaging=jar              \
+                       -DrepositoryId=thirdparty   \
+                       -Durl=http://localhost/nexus/content/repositories/thirdparty

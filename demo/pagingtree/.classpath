@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.scala" kind="src" output="target/scala_2.8.1/test-classes" path="src/test/scala"/>
+	<classpathentry including="**/*.scala" kind="src" path="src/main/scala"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/runtime/logback-classic-0.9.25.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/jetty-6.1.22.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/servlet-api-2.5-20081211.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/slf4j-api-1.6.0.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/scalate-core-1.3.1.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/runtime/slf4j-api-1.6.0.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/runtime/logback-core-0.9.25.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/cglib-nodep-2.2.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/servlet-api-2.5-20081211.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/scalatra_2.8.1-2.0.0.M2.jar" sourcepath="/home/itang/.m2/repository/org/scalatra/scalatra_2.8.1/2.0.0.M2/scalatra_2.8.1-2.0.0.M2-sources.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/squeryl_2.8.1-0.9.4-RC3.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/jetty-util-6.1.22.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/scalatest-1.2.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/junit-4.8.1.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/scalatra-test_2.8.1-2.0.0.M2.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/scalatra-scalatest_2.8.1-2.0.0.M2.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/compile/scalatra-scalate_2.8.1-2.0.0.M2.jar"/>
+	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/test/jetty-servlet-tester-6.1.22.jar"/>
+	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="target/scala_2.8.1/classes"/>
+</classpath>

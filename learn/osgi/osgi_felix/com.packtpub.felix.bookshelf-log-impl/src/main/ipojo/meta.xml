@@ -1,0 +1,13 @@
+<ipojo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="org.apache.felix.ipojo
+       http://felix.apache.org/ipojo/schemas/CURRENT/core.xsd"
+	xmlns="org.apache.felix.ipojo">
+	<component
+		classname="com.packtpub.felix.bookshelf.log.impl.BookshelfLogHelperImpl"
+		name="BookshelfLogHelperImpl">
+		<provides />
+		<requires field="log" />
+	</component>
+	<instance component="BookshelfLogHelperImpl" name="bookshelf.log-helper.impl" />
+
+</ipojo>

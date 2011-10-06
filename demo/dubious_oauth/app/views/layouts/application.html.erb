@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="csrf-param" content="authenticity_token"/>
+	<meta name="csrf-token" content="123"/>
+    <title>唐古拉山微薄</title>
+    <%= stylesheet_link_tag '/libs/grid960/css/reset.css' %>
+	<%= stylesheet_link_tag '/libs/grid960/css/text.css' %>
+	<%= stylesheet_link_tag '/libs/grid960/css/960.css' %>
+    <%= stylesheet_link_tag 'main' %>
+    <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" %>
+    <script type="text/javascript">
+      $(function(){
+        
+        });
+      });
+    </script>
+  </head>
+  <body>
+      <div id="wrap">
+      	<div id="main">
+      		<div id="header">
+      			<div class="container_16">
+      			</div>
+      		</div>
+      		<div class="container_16 clearfix" id="content">
+      			<h1>唐古拉山微薄</h1>
+      			<p style="color: green"><%= flash_notice %></p>
+      			@TODO: content
+      			<%= yield_body %>
+      		</div> 
+      	</div>
+      </div>
+      <div id="footer">
+		<div class="container_16">
+		&copy; itang.me
+		</div>
+      </div>
+    </div>
+  </body>
+</html>
+
+

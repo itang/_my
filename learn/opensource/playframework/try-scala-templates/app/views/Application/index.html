@@ -1,0 +1,12 @@
+#{extends 'main.html' /} 
+#{set title:'Home' /}
+
+#{if flash.error}
+	<p style="color:#c00">
+		${flash.error}
+	</p>
+#{/if}
+<ul>
+<li><a href="@{Application.groovy()}"> groovy-template-page </a></li>
+<li><a href="@{Application.scala()}"> scala-template-page </a></li>
+</ul>

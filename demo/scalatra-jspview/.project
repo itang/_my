@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<projectDescription>
+  <name>scalatra-sbt-prototype</name>
+  <comment>scalatra-sbt-prototype 2.0.0.M2</comment>
+  <projects></projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.scala-ide.sdt.core.scalabuilder</name>
+    </buildCommand>
+    
+  </buildSpec>
+  <natures>
+    <nature>org.scala-ide.sdt.core.scalanature</nature><nature>org.eclipse.jdt.core.javanature</nature>
+    
+  </natures>
+</projectDescription>

@@ -1,0 +1,17 @@
+#{extends 'main.html' /}
+#{set title:'知音搜索 Demo' /}
+<script>
+$(function(){
+	$('#q').focus();
+});
+</script>
+<div style="text-align:center">
+	<h1>知音搜索</h1>
+	<p>	“大声的说出来， 整个世界都由你的掌控！”</p>
+</div>
+<div style="height:300px;padding:100px;">
+<form action="@{Application.search()}" method="GET">
+	<input type="text" class="lst index" id="q" name="q" value="${q?:'ERP'}"/>
+	<input value="Search" class="lsb" type="submit" name="btnG">
+</form>
+</div>

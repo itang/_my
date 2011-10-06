@@ -1,0 +1,26 @@
+-@ val title: String
+-@ val headline: String = title
+-@ val body: String
+
+!!! 5
+html(lang="en")
+  head
+    title= title
+    meta(http-equiv = "Content-Type; charset=utf-8" content = "text/html")
+    link(type = "text/css" rel = "stylesheet" href = "/lib/ext-2.3.0/resources/css/ext-all.css")
+    link(type = "text/css" rel = "stylesheet" href = "/css/PagingTreeLoader.css")
+    link(type = "text/css" rel = "systelsheet" href = "/css/main.css")
+    script(type = "text/javascript" src = "/lib/ext-2.3.0/adapter/ext/ext-base.js")
+    script(type = "text/javascript" src  = "/lib/ext-2.3.0/ext-all.js")
+    script(type = "text/javascript" src  = "/lib/PagingTreeLoader.js")
+  body
+    #container
+      #header
+        h1 #{headline}
+      #content
+        != body
+      
+      #footer
+        a(href = "/") 主页 
+
+      

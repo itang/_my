@@ -1,0 +1,6 @@
+A gae demo webapp
+  基于scala, guice, guice-serlvet
+  使用apache buildr构建和发布
+  
+  注：发布到GAE时, 依赖以下命令: 
+  	rm, unzip, appcfg

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+   version="2.5"> 
+    <description></description>
+    <display-name></display-name>
+
+    <!-- Define servlet-mapped and path-mapped example filters -->
+   <!-- <filter>
+        <filter-name>guiceFilter</filter-name>
+        <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>guiceFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+-->
+    <!--
+	<context-param>
+		<param-name></param-name>
+		<param-value></param-value>
+	</context-param>
+	-->
+    <!-- Define example application events listeners -->
+    <!--
+    <listener>
+        <listener-class>ContextListener</listener-class>
+    </listener>
+    -->
+<!--    <listener>
+        <listener-class>com.tangqiong.apps.guices.MyGuiceServletConfig</listener-class>
+    </listener>
+-->
+    <!-- Define servlets that are included in the example application -->
+    <!--
+    <servlet>
+      <servlet-name>servlet</servlet-name>
+      <servlet-class>servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet</servlet-name>
+        <url-pattern>/servlet</url-pattern>
+    </servlet-mapping>
+    -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/common/404.jsp</location>
+    </error-page>
+    	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/common/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/common/500.jsp</location>
+	</error-page>
+</web-app>

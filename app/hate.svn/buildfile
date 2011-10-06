@@ -1,0 +1,68 @@
+Buildr.settings.build['scala.version'] = "2.8.1"
+
+require 'buildr/scala'
+require 'rbconfig'
+
+repositories.remote << "http://www.ibiblio.org/maven2/"
+repositories.remote << "http://qtjambi.sourceforge.net/maven2"
+repositories.remote << "http://guice-maven.googlecode.com/svn/trunk"
+
+QTJAMBI_VERSION = "4.5.2_01"
+qtjambi_native = "net.sf.qtjambi:qtjambi-native:jar:#{QTJAMBI_VERSION}"
+download artifact(qtjambi_native) => "http://lazerdoom.googlecode.com/svn/trunk/lazerdoom2/libs/jambi/qtjambi-linux32-lgpl-4.5.0_01/qtjambi-linux32-gcc-4.5.0_01.jar"
+
+desc "The Hate.svn project"
+
+Project.local_task :run
+
+define "hate.svn" do
+  project.version = "1.0.0"
+  project.group = "com.tangqiong"
+  manifest["Implementation-Vendor"] = "tangqiong.com"
+  
+  package :jar
+  
+  compile.with "net.sf.qtjambi:qtjambi-platform-" + qt_platform + ":jar:#{QTJAMBI_VERSION}"
+  compile.with "net.sf.qtjambi:qtjambi-base-" + qt_platform + ":jar:#{QTJAMBI_VERSION}"
+  #compile.with qtjambi_native if linux?
+  
+  test.with 'org.scalatest:scalatest:jar:1.3'
+  
+  task :run => :compile do 
+    ps = File::PATH_SEPARATOR
+	cmd = 'java -cp "' + compile.dependencies.join(ps) + ps + 'target/classes/" client.Desktop' 
+	puts "run command: " + cmd
+	system cmd
+  end
+  
+  output_info(self.project)
+  
+end
+
+##################################################################################
+
+def output_info(project)
+  puts "OS: " + Config::CONFIG['host_os']
+  #puts project.compile.dependencies
+end 
+
+def qt_platform
+  case Config::CONFIG['host_os']
+    when /mswin32/i, /mingw32/i
+      "win32"
+	when /mswin64/i, /mingw64/i
+      "win64"
+    when /linux-gnu/i
+        "linux32"
+    else
+      Config::CONFIG['host_os'] #TODO
+	end
+end 
+
+
+def linux?
+  if Config::CONFIG['host_os'] =~ /linux-gnu/i 
+    true
+  else false
+  end
+end

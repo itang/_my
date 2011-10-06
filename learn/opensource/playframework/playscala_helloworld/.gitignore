@@ -1,0 +1,8 @@
+eclipse/
+test-result/
+lib/
+tmp/
+precompiled/
+.classpath
+.project
+.scala_dependencies

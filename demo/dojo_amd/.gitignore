@@ -1,0 +1,5 @@
+src/main/webapp/resources/libs/dojo
+.classpath
+.project
+.settings/
+target/

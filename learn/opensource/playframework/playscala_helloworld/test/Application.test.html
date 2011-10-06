@@ -1,0 +1,30 @@
+*{ You can use plain selenium command using the selenium tag }*
+
+#{selenium}
+    // Open the home page, and check that no error occured
+    open('/')
+    assertNotTitle('Application error')
+    
+    // check that it is the form
+    assertTextPresent('The Hello world app.')
+    
+    //Submit the form
+    clickAndWait('css=input[type=submit]')
+    
+    //check the error
+    assertTextPresent('Oops')
+    
+    //Type the name and submit
+    type('css=input[type=text]', 'bob')
+    clickAndWait('css=input[type=submit]')
+    
+    //check the result
+    assertTextPresent('Hello bob')
+    assertTextPresent('The Hello world app.')
+    
+    // check the back link
+    clickAndWait('link=Back to form')
+    
+    //Home page?
+    assertTextNotPresent('Hello bob!')
+#{/selenium}

@@ -1,0 +1,26 @@
+Buildr.settings.build['scala.version'] = "2.8.1"
+require 'buildr/scala'
+
+repositories.remote << 'http://repo1.maven.org/maven2' <<
+					'http://scala-tools.org/repo-releases'
+
+Project.local_task :run
+
+define 'scala-anti-xml' do
+	project.version = '0.0.1'
+	project.group = 'me.itang.os'
+	
+	compile.using :target => '1.5', :javac => %w[-encoding UTF-8], :deprecation => true
+	
+	#compile.with 'com.codecommit:anti-xml:jar:0.1'
+	
+	test.with 'org.scalatest:scalatest:jar:1.3'
+	test.using(:scalatest)
+	
+	task :run => :compile do
+    	system 'sbt update run'
+	end
+	
+	package :jar
+end
+

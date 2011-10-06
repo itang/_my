@@ -1,0 +1,72 @@
+#{extends 'main.html' /}
+#{set title:'知音搜索结果' /}
+<div class="grid_3">
+	<h2>知音搜索</h2>
+	<p>	“大声的说出来， 整个世界都由你的掌控！”</p>
+	<h5>语音操作提示</h5>
+	<ul>
+		<li>说出你要搜索的内容 + 搜索</li>
+		<li>朗读搜索结果信息</li>
+	<ul>
+</div>
+
+<div class="grid_13">
+	<form action="@{Application.search()}" method="GET">
+		<input type="text" class="lst result" name="q" value="${q?:'ERP'}"/>
+		<input value="Search" class="lsb" type="submit" name="btnG">
+	</form>
+	
+	找到约 ${result.total()} 条结果 （用时 ${result.costTime()} 毫秒） 
+	<div class="clearfix">&nbsp;</div>
+	<ul>
+	#{list items:result.hits, as:'hit'}
+	    <div>
+	    	<div>
+	    		<span>
+	    			<a href="#" class="item">${hit.summary.contains("title") ? hit.summary.apply("title") : ""}</a>
+	    			| ${hit.content.contains("audittime") ? hit.content.apply("audittime") : ""}
+	    		</span>
+	    	</div>
+	    	<div>
+		    	<p>
+		    	${hit.content.contains("introduction") ? hit.content.apply("introduction").raw() : ""}
+		    	<br/>
+	    		<b>地址:</b> ${hit.content.contains("detailaddr") ? hit.content.apply("detailaddr") : ""}
+	    		</p>
+	    	</div>
+	    </div>
+	    <div class="clearfix"></div>
+	#{/list}
+	</ul>
+	<span>
+	#{if pageInfo.currPage() == 1}
+		<span class="apage"><b class="apage">&lt;&lt;</b></span>
+	#{/if}
+	#{else}
+	<a class="apage" href="@{Application.search()}?q=${q}&page=1&limit=10">&lt;&lt;</a>
+	#{/else}
+	
+	#{list items:pageInfo.pages(), as:'page'}
+		#{if page == pageInfo.currPage()}
+			<span class="apage"><b >${page}</b></span>
+		#{/if}
+		#{else}
+			<a class="apage" href="@{Application.search()}?q=${q}&page=${page}&limit=10">${page}</a>
+		#{/else}
+	#{/list}
+	
+	#{if pageInfo.isLastPage()}
+	<span class="apage"><b class="apage">&gt;&gt;</b></span>
+	#{/if}
+	#{else}
+	<a class="apage" href="@{Application.search()}?q=${q}&page=${pageInfo.lastPage()}&limit=10">&gt;&gt;</a>
+	#{/else}
+	
+	</span>
+	<div class="clearfix">&nbsp;</div>
+	<form action="@{Application.search()}" method="GET">
+		<input type="text" class="lst result" name="q" value="${q?:'ERP'}"/>
+		<input value="Search" class="lsb" type="submit" name="btnG">
+	</form>
+	<div class="clearfix">&nbsp;</div>
+</div>

@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.packtpub.felix</groupId>
+	<artifactId>com.packtpub.felix.bookshelf-webapp</artifactId>
+	<version>1.13.0</version>
+	<packaging>bundle</packaging>
+	<name>Bookshelf Web-App</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<repositories>
+		<repository>
+			<id>Releases</id>
+			<url>file:///home/itang/.m2/obr/felixbook/releases</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<!-- releases repo -->
+		<repository>
+			<id>Releases</id>
+			<!-- <url>http://localhost/nexus/content/repositories/releases</url> -->
+			<url>file:///home/itang/.m2/obr/felixbook/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>Snapshots</id>
+			<url>http://localhost/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+			<version>4.2.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.compendium</artifactId>
+			<version>4.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.packtpub.felix</groupId>
+			<artifactId>com.packtpub.felix.bookshelf-service</artifactId>
+			<version>1.10.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.packtpub.felix</groupId>
+			<artifactId>com.packtpub.felix.bookshelf-inventory-api</artifactId>
+			<version>1.5.0</version>
+			<optional>false</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<inherited>true</inherited>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.1.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-Category>sample</Bundle-Category>
+						<Webapp-Context>bookshelf</Webapp-Context>
+						<!-- <Web-ContextPath>/bookshelf</Web-ContextPath> -->
+						<Import-Package>com.packtpub.felix.bookshelf.inventory.api, *</Import-Package>
+					</instructions>
+					<remoteOBR>Releases</remoteOBR>
+					<prefixUrl>file:///home/itang/.m2/obr/felixbook/releases</prefixUrl>
+					<ignoreLock>true</ignoreLock>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

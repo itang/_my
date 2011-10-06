@@ -1,0 +1,7 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.pragprog.HelloWorld
+Bundle-Name: HelloWorld
+Bundle-Version: 1.0.0
+Bundle-Activator: com.pragprog.hello.service.impl.HelloPublisher
+Import-Package: org.osgi.framework
+Export-Package: com.pragprog.hello.service

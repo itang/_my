@@ -1,0 +1,6 @@
+echo Now adding books to inventory. . .
+
+add admin admin 9789079350018 "OSGi Service Platform, Core Specification, Release 4, Version 4.1" "OSGi Alliance" Reference 8
+add admin admin 9789079350025 "OSGi Service Platform, Service Compendium, Release 4, Version 4.1" "OSGi Alliance" Reference 6
+
+echo Done.

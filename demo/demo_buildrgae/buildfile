@@ -1,0 +1,59 @@
+# buildr conf file
+# encoding: UTF-8
+require 'buildr/scala'
+require 'buildr/jetty'
+require 'readline'
+
+# Standard maven2 repository
+repositories.remote << 'http://www.ibiblio.org/maven2'	<<
+					'http://objectify-appengine.googlecode.com/svn/maven' <<
+					'http://guice-maven.googlecode.com/svn/trunk'
+					
+GAE_GROUP = group('appengine-testing', 'appengine-jsr107cache', 'appengine-api-stubs',
+	'appengine-api-labs', 'appengine-tools-sdk', 'appengine-api-1.0-sdk',
+  :under=>'com.google.appengine', :version=>'1.3.7')
+  
+desc 'buildrgae sample Webapp'
+
+PROJECT_NAME = 'buildrgae'
+PROJECT_VERSION = '1.0-SNAPSHOT' 
+
+Project.local_task :jetty
+Project.local_task :deploy
+
+define PROJECT_NAME do
+  project.group = 'com.itang'
+  project.version = PROJECT_VERSION
+  
+  compile.with( 'com.google.code.guice:guice:jar:2.0.1',
+				'aopalliance:aopalliance:jar:1.0',
+				'com.google.code.guice:guice-servlet:jar:2.0.1',
+				'javax.servlet:servlet-api:jar:2.5'
+				#,'com.googlecode.objectify:objectify:jar:2.2.1',
+				#GAE_GROUP
+				)
+			
+  package(:war, :id => 'buildrgae').libs = package(:war).libs.select do |x| 
+  		case x.to_s
+		when /compiler/i, /servlet-api/i
+			false
+		else 
+			true
+		end
+	end 
+	
+  # run jetty server
+  task("jetty" => [package(:war), jetty.use]) do |task|
+    jetty.deploy("http://localhost:8080", task.prerequisites.first)
+    Readline::readline('[Type ENTER to stop Jetty]')
+  end
+  
+  # deploy to gae
+  task :deploy => [package(:war)] do |task|
+  	war_dir = "target/%s-%s" % [PROJECT_NAME, PROJECT_VERSION]
+  	system "rm -rf #{war_dir}"
+	system "unzip #{war_dir}.war -d #{war_dir}"
+	system "appcfg update #{war_dir}"
+  end
+  
+end

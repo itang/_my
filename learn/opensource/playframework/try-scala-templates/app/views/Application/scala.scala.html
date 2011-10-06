@@ -1,0 +1,10 @@
+@(title:String, users:List[controllers.User])
+
+@main(title) {
+	<a href="@action(controllers.Application.link)">link</a>
+    <ul>
+    @users.map{ user =>
+    	<li>@user.name</li> 
+    }
+    </ul>
+}

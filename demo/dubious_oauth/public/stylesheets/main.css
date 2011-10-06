@@ -1,0 +1,461 @@
+a {
+	text-decoration: none;
+	color: #2f7fb9;
+}
+
+a:visited {
+	color: #68a0b7;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.pagination {
+	margin: 0 0 20px 0;
+	padding: 0;
+	font-size: 110%;
+}
+
+.pagination a, .pagination .current, .pagination .disabled {
+	padding: 0 6px;
+	line-height: 26px;
+	border: 1px solid #dae7f1;
+	display: inline-block;
+}
+
+.pagination .current {
+	font-weight: bold;
+	background: #e3f1fd;
+} 
+
+.pagination a:hover {
+	background: #f0f3f3;
+}
+
+.pagination .disabled {
+	color: #dae7f1;
+}
+
+.jt-loader {
+	background: url(/images/loader.gif) no-repeat center center;
+	width: 960px;
+	height: 380px;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+}
+
+.artist-card {
+	margin-bottom: 20px;
+}
+
+.artist-card .label-logo {
+	float: right;
+	padding-left: 5px;
+}
+
+.label-card {
+	height: 200px;
+	text-align: center;
+}
+
+.label-card .label-logo-wrapper {
+	height: 120px;
+}
+
+.label-card .label-logo-wrapper img {
+	width: 120px;
+	height: 120px;
+}
+
+.artist-card a, .label-card a {
+	font-size: 90%;
+}
+
+.artist-card strong, .label-card strong {
+	font-size: 110%;
+	display: block;
+}
+
+#flash_error, #flash_notice {
+	background-color: #fffab4;
+	border: 1px solid #ffb5a9;
+	line-height: 24px;
+	font-weight: bold;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.twitter-post {
+	margin: 10px 0;
+	font-size: 90%;
+}
+
+.date {
+	text-align: right;
+	color: #959ca7;
+	font-size: 95%;
+}
+
+#header {
+	background: black;
+	height: 36px;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+}
+
+#header .grid_3 {
+	text-align: right;
+}
+
+#header .grid_13 {
+	text-align: left;
+	color: #fff;
+	line-height: 36px;
+}
+
+#page-title {
+	line-height: 50px;
+}
+
+#page-title h1, h1.section-header {
+	color: #21435c;
+	margin: 15px 0;
+	padding: 0;
+	font-size: 160%;
+	line-height: 130%;
+	font-weight: bold;
+}
+
+.section-header {
+	border-bottom: 2px solid #dae7f1;
+}
+
+.section-header span {
+	float: right;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+#nav {
+	background: url(/images/jt-fade.png) repeat-x 0 top;
+	height: 380px;
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	overflow: hidden;
+}
+
+#logo {
+	text-align: center;
+	width: 100%;
+	height: 360px;
+	position: relative;
+}
+
+#logo img {
+	padding-top: 5px;
+}
+
+#nav ul {
+	text-align: left;
+	padding: 0;	
+	margin: 0;
+	list-style: none;
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+}
+
+#nav li {
+	margin: 9px 1px;
+	padding: 0;
+	font: 12px/15px Georgia, "Times New Roman", Times, serif;
+}
+
+#nav li a {
+	color: #646464;
+	background: url(/images/white-semi-trans.png) repeat;
+	text-decoration: none;
+	padding: 3px 8px;
+}
+
+#nav li a:hover {
+	background: #fff;
+}
+
+#jumbotron {
+	position: relative;
+	overflow: hidden;
+	height: 380px;
+}
+
+#jt-image {
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	width: 100%;
+	height: 380px;
+}
+
+#jt-image img {
+	position: absolute;	
+	z-index: 5;
+	top: 0;
+}
+
+#jt-info {
+	position: absolute;
+	z-index: 10;
+	right: 10px;
+	bottom: 10px;
+	background: #000;
+	color: #fff;
+	font-size: 16px;
+	padding: 5px 10px;
+	display: none;
+}
+
+#jt-info a {
+	color: #eee;
+	display: block;
+}
+
+#content {
+	margin-bottom: 20px;
+}
+
+.spacer {
+	height: 20px;
+	width: 100%;
+}
+
+.side-box {
+	border: 1px solid #dae7f1;
+	background: #eef5fe url(/images/jt-fade.png) repeat-x 0 -60px;
+	margin-bottom: 20px;
+	width: 328px;
+	padding: 10px;
+	
+}
+
+.side-box h1, .side-box h2 {
+	color: #21435c;
+	padding-left: 5px;
+}
+
+.side-box.twitter-box {
+	background: #e6f1fd url(/images/twitter-bird.png) no-repeat 5px 5px;
+	
+}
+
+.side-box.twitter-box h2 {
+	padding-left: 40px;
+}
+
+.side-box.twitter-box span {
+	padding: 0 10px;
+	font-size: 90%;
+	font-weight: bold;
+	color: #00cdff;
+	display: block;
+	float: left;
+	background: #fff;
+	height: 27px;
+	line-height: 27px;
+	margin-right: 5px;
+}
+
+.side-box.twitter-box img {
+	vertical-align: middle;
+}
+
+.side-box.label-box {
+	height: 210px;
+	background: #fff;
+}
+
+.side-box.intl-label-box {
+	height: 86px;
+	background: #f4f8fd;
+}
+
+.side-box h2 {
+	margin: 0 0 10px 0;
+	font-size: 16px;
+}
+
+.side-box ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.side-box li {
+	margin: 0;
+	padding: 0;
+}
+
+#news-search {
+	font-size: 110%;
+	padding: 4px;
+}
+
+.news-browser li {
+	border-bottom: 1px dotted #b2bdc6;
+	padding: 4px;
+}
+
+.news-browser span {
+	float: right;
+}
+
+#footer-inner {
+	padding-top: 10px;
+	color: #869fb3;
+	font-size: 12px;
+}
+
+#footer-inner p {
+	margin: 0;
+}
+
+#footer-inner ul, #footer-inner li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+/* @group Buttons */
+
+input[type=submit] {
+	width: inherit;
+}
+
+.abutton, .abutton:visited, input[type=submit] {
+	background: #134169 url(/images/admin/alert-overlay.png) repeat-x;
+	display: inline-block;
+	border: 1px solid #134169;
+	color: #fff;
+	text-decoration: none;
+	font-weight: normal;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+	font-size: 15px;
+	padding: 6px 12px;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+.abutton:hover, input[type=submit]:hover {
+	background-color: #262e46;
+	color: #FFF;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.abutton:active {
+	top: 1px;
+}
+
+.small.abutton, .small.abutton:visited {
+	font-size: 11px;
+	line-height: 14px;
+	padding: 4px 8px;
+}
+
+.abutton, .abutton:visited, .abutton.medium, .abutton.medium:visited {
+	line-height: 1;
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+}
+
+.large.abutton, .large.abutton:visited {
+	font-size: 18px;
+	padding: 8px 14px 9px;
+}
+
+.abutton.start {
+	background-color: green;
+	border-color: green;
+}
+
+.abutton.stop {
+	background-color: red;
+	border-color: red;
+}
+
+.button_container {
+	display: inline;
+}
+
+p.button_row {
+	text-align: right;
+}
+
+/* @end */
+
+
+/*  
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+
+html, body {
+	height: 100%;
+	background-color: #fff;
+}
+
+#wrap {
+	min-height: 100%;
+}
+
+#main {
+	overflow:auto;
+	padding-bottom: 131px;
+}  /* must be same height as the footer */
+
+#footer {
+	position: relative;
+	margin-top: -131px; /* negative value of footer height */
+	clear:both;
+	height: 130px;
+	border-top: 1px solid #dae7f1;
+	background: #c1d4e2 url(/images/jt-fade.png) repeat-x 0 -60px;
+
+} 
+
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+content:"";
+height:100%;
+float:left;
+width:0;
+margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+
+
+/* IMPORTANT
+
+You also need to include this conditional style in the <head> of your HTML file to feed this style to IE 6 and lower and 8 and higher.
+
+<!--[if !IE 7]>
+	<style type="text/css">
+		#wrap {display:table;height:100%}
+	</style>
+<![endif]-->
+
+*/
+
+

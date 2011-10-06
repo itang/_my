@@ -1,0 +1,7 @@
+.x-tree-paging-toolbar .x-btn-left{background:none;height:18px;}
+.x-tree-paging-toolbar .x-btn-right{background:none;height:18px;}
+.x-tree-paging-toolbar .x-btn-center{background:none;padding:0;height:18px;}
+.x-tree-paging-btn-icon .x-btn-center .x-btn-text{background-position:center;background-repeat:no-repeat;height:13px;width:9px;cursor:pointer;white-space:nowrap;padding:0;}
+.x-tree-paging-nowrap {white-space:nowrap;}
+.x-tree-paging-float  {float:left;white-space:nowrap;}
+.x-tree-paging-inline {display: inline;white-space:nowrap;}

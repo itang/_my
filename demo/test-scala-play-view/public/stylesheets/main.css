@@ -1,0 +1,177 @@
+/**
+ * main css.
+ *
+*/
+
+/*  
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+html,body {
+	height: 100%;
+	/*background-color: #fff;*/
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif, Helvetica, Tahoma;
+	font-size: 12px;
+	line-height: 150%; /** 行高 **/
+}
+
+#wrap {
+	min-height: 100%;
+}
+
+#main {
+	overflow:auto;
+	padding-bottom: 81px;
+}  /* must be same height as the footer */
+
+#footer {
+	position: relative;
+	margin-top: -81px; /* negative value of footer height */
+	clear:both;
+	height: 80px;
+	border-top: 1px solid #dae7f1;
+	background: #c1d4e2 -60px;
+
+} 
+
+/*Opera Fix*/
+body:before { /* thanks to Maleika (Kohoutec)*/
+	content: "";
+	height: 100%;
+	float: left;
+	width: 0;
+	margin-top: -32767px; /* thank you Erik J - negate effect of float*/
+}
+
+a {
+	text-decoration: none;
+	color: #2f7fb9;
+}
+
+a:visited {
+	color: #68a0b7;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* IMPORTANT
+
+You also need to include this conditional style in the <head> of your HTML file to feed this style to IE 6 and lower and 8 and higher.
+
+<!--[if !IE 7]>
+	<style type="text/css">
+		#wrap {display:table;height:100%}
+	</style>
+<![endif]-->
+
+*/
+
+/** 顶部 logo ... **/
+#top {
+	background-color: black;
+	padding:2px;
+	/*height: 30px;*/
+	margin-left: auto;
+  	margin-right: auto;
+  	height:20px;
+}
+
+a.item {
+	text-decoration: underline;
+	font-size:13px;
+}
+
+a.item:hover{
+	background-color: #68a0b7;
+	color:#fff;
+}
+
+#top a{
+	color: #FFFFFF;
+
+}
+
+#top a:hover{
+	color: #933400;
+	background-color:blue;
+	font-weight:bold;
+}
+
+.apage{
+	font-size:16px;
+}
+
+
+#header {
+	height: 60px;
+	/*background: #c1d4e2;*/
+}
+
+#topbar-left {
+	display: inline;
+  	text-align:left;
+	float:left;
+	margin-left: 10px;
+}
+
+#topbar-right {
+	display: inline;
+	text-align:right;
+	float:right;
+	margin-right: 10px;
+}
+
+#content{
+	margin-top: 10px;	
+}
+
+.lst-b, .lst {
+	border: 1px solid #CCC;
+	height: 26px;
+	padding: 4px 0 0;
+}
+
+.lst {
+	-moz-box-sizing: content-box;
+	background: white;
+	color: black;
+	font: 18px arial,sans-serif;
+	float: left;
+	padding-left: 6px;
+	padding-right: 10px;
+	vertical-align: top;
+	width: 100%;
+}
+
+input.index{
+	width: 580px;
+}
+
+input.result{
+	width: 480px;
+}
+
+.lsb {
+	font: 15px arial,sans-serif;
+	background-position: bottom;
+	border: 1;
+	border-left: none;
+	color: black;
+	cursor: pointer;
+	height: 32px;
+	margin: 0;
+	vertical-align: top;
+}
+
+.lsb:active {
+	background: #CCC;
+}

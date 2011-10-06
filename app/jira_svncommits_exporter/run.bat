@@ -1,0 +1,1 @@
+java -cp lib/a-1.0.jar;lib/scala-library.jar;lib/scalax-0.1.jar Main

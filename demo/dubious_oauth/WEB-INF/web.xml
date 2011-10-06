@@ -1,0 +1,19 @@
+<!-- Generated from app.yaml. Do not edit. -->
+<web-app version='2.5' xmlns='http://java.sun.com/xml/ns/javaee'>
+  <servlet>
+    <servlet-name>index</servlet-name>
+    <servlet-class>controllers.IndexController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>index</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>callback</servlet-name>
+    <servlet-class>controllers.CallbackController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>callback</servlet-name>
+    <url-pattern>/callback</url-pattern>
+  </servlet-mapping>
+</web-app>

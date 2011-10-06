@@ -1,0 +1,34 @@
+<%@ var body: String %> 
+<%@ var title: String = "Play! demo: gae, scala,scalate" %>
+<%@ var logined : Boolean %>
+<!DOCTYPE html>
+<html>
+<head>
+<title>${title}</title>
+<link rel="shortcut icon" type="image/png" href="<%= staticurl("/public/images/favicon.png") %>"> 
+<link rel="stylesheet" type="text/css" media="screen" href="<%= staticurl("/public/stylesheets/main.css") %>">
+<link rel="stylesheet" type="text/css" media="screen" href="<%= staticurl("/public/stylesheets/jquery.snippet.css") %>">
+<script type="text/javascript" src="<%= staticurl("/public/javascripts/jquery-1.4.2.min.js") %>"></script>
+<script type="text/javascript" src="<%= staticurl("/public/javascripts/jquery.snippet.js") %>"></script>
+<script type="text/javascript" src="<%= staticurl("/public/javascripts/sh_scala.js") %>"></script>
+
+</head>
+<body>
+<div id="container">
+<div id="header">
+	<div id="nav">
+	<a href="${url("Application.index")}">主页</a> |
+	#if(logined)
+		${session.get("user")} 
+		<a href="${url("Application.logout")}">退出</a>
+	#else
+		<a href="${url("Application.login")}">登录</a>
+	#end
+	</div>
+</div>
+<div id="content"><%= body %></div>
+<div id="header">
+</div>
+</div>
+</body>
+</html>

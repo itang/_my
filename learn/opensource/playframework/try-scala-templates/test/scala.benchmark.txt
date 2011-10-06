@@ -1,0 +1,43 @@
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        Play!
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /application/scala
+Document Length:        3189 bytes
+
+Concurrency Level:      50
+Time taken for tests:   2.671 seconds
+Complete requests:      1000
+Failed requests:        0
+Write errors:           0
+Total transferred:      3541000 bytes
+HTML transferred:       3189000 bytes
+Requests per second:    374.41 [#/sec] (mean)
+Time per request:       133.545 [ms] (mean)
+Time per request:       2.671 [ms] (mean, across all concurrent requests)
+Transfer rate:          1294.70 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   2.8      1      53
+Processing:    45  126  29.7    126     327
+Waiting:       22  119  33.6    120     326
+Total:         45  127  29.8    127     328
+
+Percentage of the requests served within a certain time (ms)
+  50%    127
+  66%    135
+  75%    141
+  80%    144
+  90%    155
+  95%    176
+  98%    211
+  99%    236
+ 100%    328 (longest request)

@@ -1,0 +1,13 @@
+{
+	identifier: 'id',
+	label: 'name',
+	items: [
+	        { id: 'form', name:'表单Form', type:'form',
+	        		children:[{_reference:'EG'}, {_reference:'KE'}, {_reference:'SD'}]
+		},
+		{ id: 'EG', name:'基本控件及验证', type:'base', url: 'form1.jsp' },
+	        { id: 'KE', name:'Kenya', type:'base' },
+	        { id: 'SD', name:'Sudan', type:'base'},
+		{ id: 'pagelive', name: '页面生命周期', type:'form', url: 'pagelive.jsp'}
+	       ]
+}

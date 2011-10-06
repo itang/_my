@@ -1,0 +1,11 @@
+!!com.itang.demo.mail.impl.YamlConfig
+server: 
+  host: smtp.gmail.com
+  username: springyhy@gmail.com
+  password: springyhy2010
+  port: 587
+  defaultEncoding: UTF-8
+email: 
+  from: itang@yihongyu.com
+  to: live.tang@gmail.com
+  fileDir: "E:/documents/一红宇/周报"

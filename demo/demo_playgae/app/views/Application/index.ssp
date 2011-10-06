@@ -1,0 +1,43 @@
+controllers.scala:
+<pre class="scala">
+package controllers
+
+import play._
+import play.mvc._
+import play.modules.gae._
+
+trait Datas { self: Controller =>
+  @Before
+  def prepareData {
+    session("user") match {
+      case Some(name) => renderArgs.put("logined", true)
+      case None => renderArgs.put("logined", false)
+    }
+  }
+}
+
+object Application extends ScalateController with Datas {
+
+  def index = render()
+
+  def login = GAE.login("Application.gaeLogined")
+
+  def logout = GAE.logout("Application.index")
+
+  def gaeLogined = if (GAE.isLoggedIn) {
+    session.put("user", GAE.getUser.getEmail)
+    Action(Application.index)
+  } else {
+    Action(Application.login)
+  }
+}
+
+</pre>
+<script type="text/javascript">
+<!--
+$(function(){
+	$("pre.scala").snippet("scala");
+});
+//-->
+</script>
+

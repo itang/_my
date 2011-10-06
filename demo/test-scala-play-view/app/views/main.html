@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/960/reset.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/960/text.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/960/960.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <script src="@{'/public/javascripts/jquery-1.5.2.min.js'}" type="text/javascript" charset="utf-8"></script>
+        #{get 'moreScripts' /}
+    </head>
+    <body>
+		<div id="wrap">
+		    <div id="main">
+				<div id="top">
+					<div id="topbar-left">
+						#{if request.path == "/"}
+						<a><b>首页</b></a>
+						#{/if}
+						#{else}
+						<a href="/">首页</a>
+						#{/else}
+						| <a href="">帮助</a>
+					</div>
+					<div id="topbar-right">
+						<a href="">配置</a> | <a href="/">登录</a>
+					</div>
+				</div>
+				<div id="content" class="container_16 clearfix">
+				    <div>
+				      #{doLayout /}
+				    </div>
+				</div>
+		    </div>
+		</div>
+		<div id="footer">
+			<div class="container_16">
+				<div class="grid_16">
+					<div style="text-align:center">
+						<b>语音技术 | 企业搜索 | 人工智能 | 云计算</b>
+						<div class="clearfix">&nbsp;</div>
+						&copy;2011
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>

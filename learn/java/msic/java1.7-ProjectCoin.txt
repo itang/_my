@@ -1,0 +1,54 @@
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        //Support for Strings in Switch Statements
+        String color = "red";
+        switch (color) {
+            case "red":
+                System.out.println("the color is red");
+                break;
+            case "blue":
+                System.out.println("the color is blue");
+            default:
+                System.out.println("unknow color!");
+        }
+
+        // Improved Type Inference for Generic Instance Creation
+        Map<String, String> map = new HashMap<>();
+        System.out.println(map.size());
+
+        //Better Integer Literals: Adds support for binary literals and underscore separators in numbers to aid readability
+        long creditCardNumber = 1234_5678_9012_3456L;
+        System.out.println(creditCardNumber);
+
+        //Simplified Varargs Method Invocation:
+        //
+        //          *@SuppressWarnings("generic-varargs")
+        //  // Ensures only values of type T can be stored in elements.
+        //*  static <T> List<T> asList(T... elements) { ... }
+
+        //Automatic Resource Management
+        //copy();
+
+
+        //Multi-catch
+        try {
+            throw new IOException("ss");
+        } catch (IOException | RuntimeException e) {
+            System.out.println("IOException RuntimeException");
+        }
+    }
+
+    public void copy(String src, String dest) throws IOException {
+        try (InputStream in = new FileInputStream(src);
+             OutputStream out = new FileOutputStream(dest)) {
+            byte[] buf = new byte[8192];
+            int n;
+            while ((n = in.read(buf)) >= 0)
+                out.write(buf, 0, n);
+        }
+    }
+}

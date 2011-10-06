@@ -1,0 +1,23 @@
+application: t.itang.me
+version: duby
+runtime: java
+public_root: /public
+
+
+resource_files:
+  - exclude: /build/**
+
+sessions_enabled: true
+
+handlers:
+  - url: /
+    servlet: controllers.IndexController
+    name: index
+  - url: /callback
+    servlet: controllers.CallbackController
+    name: callback
+    
+
+#welcome_files:
+#  - /
+#  - index.html

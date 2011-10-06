@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<auto>
+	<name>部署文件导出器 (from jira commits )</name>
+	<export>
+		<from>E:/IdeaProjects/test/out/artifacts/test</from>
+		<branch>trunk</branch>
+		<!-- <branch>b20100430_dingnanxingguo</branch> -->
+		<output>output</output>
+		<commitsDir>commits</commitsDir>
+		<type>maven</type>
+	</export>
+</auto>

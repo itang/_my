@@ -1,0 +1,20 @@
+body {
+	background-color: black;
+	color: #FFFFFF;
+	font-size: 10pt;
+}
+
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: red;
+	font-weight: bold;
+}
+
+#header {
+	text-align: right;
+}

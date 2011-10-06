@@ -1,0 +1,17 @@
+.ensime
+.project
+.classpath
+
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+out/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+.scala_dependencies
