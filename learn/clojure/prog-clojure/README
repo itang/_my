@@ -1,0 +1,13 @@
+# prog-clojure
+
+learn from 《programming clojure》
+
+## Usage
+
+$ lein midje
+
+## License
+
+Copyright (C) 2011 itang
+
+Distributed under the Eclipse Public License, the same as Clojure.
