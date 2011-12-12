@@ -146,11 +146,28 @@
 (facts "Lazy and Infinite Sequences"
   (fact (doall x) => '(1 2))
   (fact (dorun x) => nil)
-
   )
+
+(import '(java.io File BufferedReader FileReader))
+(doseq [x (seq (.listFiles (File. ".")))] (pr x))
+(pr (map #(.getName %) (seq (.listFiles (File. ".")))))
+(pr (map #(.getName %) (.listFiles (File. "."))))
+(pr (count (file-seq (File. "."))))
 
 (facts "Clojure Makes Java Seq-able"
   (fact (first (.getBytes "hello")) => 104)
   (fact (re-seq #"\w+" "the quick brown fox") => '("the" "quick" "brown" "fox"))
+  (fact (map #(.getName %) (seq (.listFiles (File. "."))))
+    =>
+    (map #(.getName %) (.listFiles (File. "."))))
   )
+
+(defn minutes-to-millis [mins] (* mins 1000 60))
+
+(defn recently-modified? [file]
+  (> (.lastModified file)
+    (- (System/currentTimeMillis) (minutes-to-millis 30))))
+(prn (filter recently-modified? (file-seq (File. "."))))
+
+;;(prn (take 2 (line-seq (read (BufferedReader. (FileReader. (File. "project.clj")))))))
 
