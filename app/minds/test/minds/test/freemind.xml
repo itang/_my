@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="0.8.0">
+    <node TEXT="我的工具集" COLOR="#000000">
+        <font SIZE="12" BOLD="true" ITALIC="false"/>
+        <node TEXT="misc" HGAP="0" VSHIFT="0" COLOR="#000000">
+            <font SIZE="12" BOLD="true" ITALIC="false"/>
+            <node TEXT="代码LOC" HGAP="0" VSHIFT="0" COLOR="#000000">
+                <font SIZE="12" BOLD="true" ITALIC="false"/>
+                <node TEXT="cloc" HGAP="0" VSHIFT="0" COLOR="#000000">
+                    <font SIZE="12" BOLD="true" ITALIC="false"/>
+                </node>
+            </node>
+        </node>
+        <node TEXT="pomodairo" HGAP="0" VSHIFT="0" COLOR="#000000">
+            <font SIZE="12" BOLD="true" ITALIC="false"/>
+            <node TEXT="番茄工作法" HGAP="0" VSHIFT="0" COLOR="#000000">
+                <font SIZE="12" BOLD="true" ITALIC="false"/>
+            </node>
+        </node>
+        <node TEXT="text editor" HGAP="0" VSHIFT="0" COLOR="#000000">
+            <font SIZE="12" BOLD="true" ITALIC="false"/>
+            <node TEXT="emacs" HGAP="0" VSHIFT="0" COLOR="#000000">
+                <font SIZE="12" BOLD="true" ITALIC="false"/>
+            </node>
+            <node TEXT="Sublime Text" HGAP="0" VSHIFT="0" COLOR="#000000">
+                <font SIZE="12" BOLD="true" ITALIC="false"/>
+            </node>
+            <node TEXT="gedit" HGAP="0" VSHIFT="0" COLOR="#000000">
+                <font SIZE="12" BOLD="true" ITALIC="false"/>
+            </node>
+            <node TEXT="notepad++" HGAP="0" VSHIFT="0" COLOR="#000000">
+                <font SIZE="12" BOLD="true" ITALIC="false"/>
+            </node>
+        </node>
+        <node TEXT="IDE" HGAP="0" VSHIFT="0" COLOR="#000000">
+            <font SIZE="12" BOLD="true" ITALIC="false"/>
+            <node TEXT="eclipse" HGAP="0" VSHIFT="0" COLOR="#000000">
+                <font SIZE="12" BOLD="true" ITALIC="false"/>
+                <node TEXT="http://tomsondev.bestsolution.at/2011/09/29/efxclipse-0-0-6-released/" HGAP="0" VSHIFT="0"
+                      COLOR="#000000">
+                    <font SIZE="12" BOLD="true" ITALIC="false"/>
+                </node>
+                <node TEXT="bndtools" HGAP="0" VSHIFT="0" COLOR="#000000">
+                    <font SIZE="12" BOLD="true" ITALIC="false"/>
+                </node>
+            </node>
+            <node TEXT="IDEA" HGAP="0" VSHIFT="0" COLOR="#000000">
+                <font SIZE="12" BOLD="true" ITALIC="false"/>
+            </node>
+        </node>
+        <node TEXT="浏览器" HGAP="0" VSHIFT="0" COLOR="#000000">
+            <font SIZE="12" BOLD="true" ITALIC="false"/>
+            <node TEXT="chrome" HGAP="0" VSHIFT="0" COLOR="#000000">
+                <font SIZE="12" BOLD="true" ITALIC="false"/>
+                <node TEXT="Stylish" HGAP="0" VSHIFT="0" COLOR="#000000">
+                    <font SIZE="12" BOLD="true" ITALIC="false"/>
+                </node>
+            </node>
+        </node>
+        <node TEXT="windows" HGAP="0" VSHIFT="0" COLOR="#000000">
+            <font SIZE="12" BOLD="true" ITALIC="false"/>
+            <node TEXT="console" HGAP="0" VSHIFT="0" COLOR="#000000">
+                <hook NAME="accessories/plugins/NodeNote.properties">
+                    <text>http://sourceforge.net/projects/console/windows命令行工具</text>
+                </hook>
+                <font SIZE="12" BOLD="true" ITALIC="false"/>
+            </node>
+        </node>
+        <node TEXT="scm" HGAP="0" VSHIFT="0" COLOR="#000000">
+            <font SIZE="12" BOLD="true" ITALIC="false"/>
+            <node TEXT="git" HGAP="0" VSHIFT="0" COLOR="#000000">
+                <font SIZE="12" BOLD="true" ITALIC="false"/>
+            </node>
+            <node TEXT="svn" HGAP="0" VSHIFT="0" COLOR="#000000">
+                <font SIZE="12" BOLD="true" ITALIC="false"/>
+            </node>
+        </node>
+    </node>
+</map>

@@ -1,0 +1,13 @@
+# minds
+
+mindmeixxx -> freemind
+
+## Usage
+
+lein run from-dir
+
+## License
+
+Copyright (C) 2011 itang
+
+Distributed under the Eclipse Public License, the same as Clojure.
