@@ -1,6 +1,6 @@
 (ns minds.main
   (:use minds.core
-        minds.util)
+        [minds.util :only (empty-else)])
   (:import java.io.File))
 
 (def default-target-dir "./target")
@@ -9,12 +9,10 @@
 (defn json-files [from-file]
   (filter #(.. % getName (endsWith ".json")) (file-seq from-file)))
 
-(defn -main [& args]
-  (let [fdir (first args)
-        tdir (get (vec args) 1)
-        from-dir (File. (if (is-empty? fdir) default-from-dir fdir))
-        target-dir (File. (if (is-empty? tdir) default-target-dir tdir))
+(defn -main [& [fdir tdir]]
+  (let [from-dir (File. (empty-else fdir default-from-dir))
+        target-dir (File. (empty-else tdir default-target-dir))
         files (json-files from-dir)]
     (doseq [file files]
-      (println file)
+      (println (.getName file))
       (write-mindmeister-to-freemind file (File. target-dir (str (.getName file) ".mm"))))))

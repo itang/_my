@@ -8,12 +8,18 @@
 ;    (string? s) (or (= "" s) (not (nil? (re-find #"\s+" s))))
 ;    :else false))
 
-(defn is-empty? [obj]
+(defn empty-x? [obj]
+  "判定值是否为空"
   (cond
     (nil? obj) true
-    (string? obj) (blank? obj)
-    (map? obj) (= {} obj)
-    (vector? obj) (= [] obj)
-    (list? obj) (= '() obj)
-    (set? obj) (= #{} obj)
+    (string? obj) (blank? obj) ;; blank?
+    (char? obj) (blank? (str obj))
+    (coll? obj) (empty? obj) ;; empty? coll
     :else false))
+
+(defmacro if-empty [cond ept-expr els-expr]
+  `(if (empty-x? ~cond) ~ept-expr ~els-expr))
+
+(defmacro empty-else [obj default-value-expr]
+  `(if-empty ~obj ~default-value-expr ~obj))
+

@@ -1,7 +1,7 @@
 (ns minds.core
   (:use [cheshire.core]
         [hiccup.core :only (html)]
-        [minds.util]))
+        [minds.util :only [empty-x? if-empty]]))
 
 (def freemind-version "0.8.0")
 (def empty-xml (str "<map version=\"" freemind-version "\"></map>"))
@@ -19,10 +19,10 @@
 
 (defn ^String mindmeister-to-freemind
   [mindmeister-json]
-  (if (is-empty? mindmeister-json)
+  (if-empty mindmeister-json
     empty-xml
     (let [mindmeister-data (parse-string mindmeister-json)]
-      (if (is-empty? mindmeister-data)
+      (if-empty mindmeister-data
         empty-xml
         (html ;use html as xml
           [:map {:version freemind-version} (as-nodes mindmeister-data)])))))
