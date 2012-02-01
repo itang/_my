@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript" src="coffee-script.js"></script>
+<script src="serenade.0.1.1.min.js" type="text/javascript"></script>
+<!--<script type="text/coffeescript" --
+  --src="bindings_and_callbacks.coffee"></script>-->
+<script type="text/coffeescript">
+Serenade.view 'post', '''
+  div[id="serenade"]
+    h1 @title
+    p @body
+    h3 "Comments"
+    ul
+      - collection @comments
+        li @body
+'''
+
+post =
+  title: 'Serenade.js released'
+  body: 'New awesome MVC JavaScript framework'
+  comments: [{body: 'Cool!'}, {body: 'Good job!'}]
+
+result = Serenade.render('post', post, {})
+
+window.onload = ->
+  document.body.appendChild(result)
+</script>
+</head>
+<body>
+</body>
+</html>

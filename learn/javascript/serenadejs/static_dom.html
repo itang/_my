@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript" src="coffee-script.js"></script>
+<script src="serenade.0.1.1.min.js" type="text/javascript"></script>
+<!--<script type="text/coffeescript" --
+  --src="bindings_and_callbacks.coffee"></script>-->
+<script type="text/coffeescript">
+Serenade.view 'test', '''
+  div[id="foo"]
+    h1 "This is a Serenade.js example"
+    p
+      a[href="http://google.com"] "Go to Google"
+    p "Here's some text"
+    p
+      "This is "
+      em "emphasized"
+      " text"
+'''
+result = Serenade.render('test', {}, {})
+
+window.onload = ->
+  document.body.appendChild(result)
+</script>
+</head>
+<body>
+</body>
+</html>

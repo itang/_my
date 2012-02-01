@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript" src="coffee-script.js"></script>
+<script src="serenade.0.1.1.min.js" type="text/javascript"></script>
+<!--<script type="text/coffeescript" --
+  --src="bindings_and_callbacks.coffee"></script>-->
+<script type="text/coffeescript">
+Serenade.view 'test', '''
+  div[id="hello-world"]
+    h1 @name
+    p
+      a[event:click=showAlert href="#"] "Show the alert"
+'''
+
+controller = { showAlert: -> alert('Alert!!!') }
+model = { name: 'Jonas' }
+
+result = Serenade.render('test', model, controller)
+
+window.onload = ->
+  document.body.appendChild(result)
+</script>
+</head>
+<body>
+</body>
+</html>
