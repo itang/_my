@@ -1,0 +1,19 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" media="screen" href='@routes.Assets.at("stylesheets/main.css")'>
+        <link rel="shortcut icon" type="image/png" href=''@routes.Assets.at("images/favicon.png")'>
+        <!--<script  type="text/javascript" src='@routes.Assets.at("javascripts/jquery-1.7.1.min.js")'></script>-->
+        <script  type="text/javascript" src='http://odyniec.net/projects/imgareaselect/jquery-1.6.1.min.js'></script>
+    </head>
+    <body>
+    <a href="@routes.Application.index()">首页</a>
+     |<a href="@routes.Application.upload()">上传照片</a>
+    <hr/>
+        @content
+    </body>
+</html>

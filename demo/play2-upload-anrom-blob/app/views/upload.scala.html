@@ -1,0 +1,69 @@
+@******************
+* 上传演示.
+*
+*******************@
+@()(implicit request: play.api.mvc.Request[Any], flash: play.api.mvc.Flash)
+@main("上传"){
+ <link rel="stylesheet" type="text/css" href="http://odyniec.net/projects/imgareaselect/css/imgareaselect-default.css"/>
+<script type="text/javascript" src="http://odyniec.net/projects/imgareaselect/jquery.imgareaselect.pack.js"></script>
+    <script type="text/javascript">
+        function preview(img, selection) {
+            var scaleX = 100 / (selection.width || 1);
+            var scaleY = 100 / (selection.height || 1);
+
+            $('#ladybug_ant + div > img').css({
+            width: Math.round(scaleX * 400) + 'px',
+            height: Math.round(scaleY * 300) + 'px',
+            marginLeft: '-' + Math.round(scaleX * selection.x1) + 'px',
+            marginTop: '-' + Math.round(scaleY * selection.y1) + 'px'
+            });
+        }
+
+        $(function(){
+          var s = {x1: 120, y1: 90, x2: 280, y2: 210};
+          for(p in s){
+            $('input[name="' + p + '"]').val(s[p]);
+          }
+         var im =  $('#ladybug_ant').imgAreaSelect({
+              x1: 120, y1: 90, x2: 280, y2: 210 ,
+              maxWidth: 200, maxHeight: 150, handles: true ,
+              onSelectEnd: function (img, selection) {
+                $('input[name="x1"]').val(selection.x1);
+                $('input[name="y1"]').val(selection.y1);
+                $('input[name="x2"]').val(selection.x2);
+                $('input[name="y2"]').val(selection.y2);
+              } ,
+            onSelectChange: preview
+           });
+
+        $('<div><img src="@routes.Assets.at("images/ladybug_ant.jpg")" style="position: relative;" /><div>').css({
+            float: 'left',
+            position: 'relative',
+            overflow: 'hidden',
+            width: '100px',
+            height: '100px'
+        }).insertAfter($('#ladybug_ant'));
+
+        preview(null, im.getSelection());
+
+        });
+    </script>
+
+    @flash.get("message").map{ msg =>
+       <div>@msg</div>
+    }
+    @helper.form(action = routes.Application.upload, 'enctype -> "multipart/form-data") {
+    <input type="file" name="pic">
+       <p>
+        <input type="submit">
+    </p>
+    }
+
+<img id="ladybug_ant" src="@routes.Assets.at("images/ladybug_ant.jpg")" alt="A ladybug being harassed by an ant."
+     title="A ladybug being harassed by an ant." style='float: left; margin-right: 10px;'/>
+         <br/>
+        <input name="x1"/>
+        <input name="y2"/><br/>
+        <input name="x2"/>
+        <input name="y2"/>
+}
