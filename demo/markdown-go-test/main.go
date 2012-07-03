@@ -1,7 +1,6 @@
 package main
 
 import (
-  "fmt"
   "os"
   "bufio"
   "github.com/knieriem/markdown"
@@ -10,12 +9,11 @@ import (
 func main() {
   p := markdown.NewParser(&markdown.Extensions{Smart: true})
 
-  file, err := os.Open("test.md")
-  if err != nil {
-    fmt.Errorf("%s", err)
-    return
-  }
+  file, _ := os.Open("test.md")
   outfile, _ := os.Create("test_out.html")
+  defer file.Close()
+  defer outfile.Close()
+
   in := bufio.NewReader(file)
   out := bufio.NewWriter(outfile)
   p.Markdown(in, markdown.ToHTML(out))
