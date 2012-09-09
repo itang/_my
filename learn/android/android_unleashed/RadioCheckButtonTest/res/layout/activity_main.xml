@@ -1,0 +1,126 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:android1="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android1:id="@+id/textView1"
+            android1:layout_width="match_parent"
+            android1:layout_height="wrap_content"
+            android1:text="TextView" />
+
+        <RadioGroup
+            android1:id="@+id/radioGroup1"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content" >
+
+            <RadioButton
+                android1:id="@+id/radio0"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:checked="true"
+                android1:text="Windows" />
+
+            <RadioButton
+                android1:id="@+id/radio1"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:text="Linux" />
+
+            <RadioButton
+                android1:id="@+id/radio2"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:text="Moc os" />
+
+            <RadioButton
+                android1:id="@+id/radio3"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:text="Java" />
+        </RadioGroup>
+
+        <TextView
+            android1:id="@+id/textView2"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="你喜欢Android的原因" />
+
+        <CheckBox
+            android1:id="@+id/checkBox1"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="原因1" />
+
+        <CheckBox
+            android1:id="@+id/checkBox2"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="原因2" />
+
+        <CheckBox
+            android1:id="@+id/checkBox3"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="原因3" />
+
+        <CheckBox
+            android1:id="@+id/checkBox4"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="原因4" />
+
+        <Button
+            android1:id="@+id/button1"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:onClick="onClick"
+            android1:text="选择了多少项" />
+
+        <Spinner
+            android1:id="@+id/spinner1"
+            android1:layout_width="match_parent"
+            android1:layout_height="wrap_content" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/multiAutoCompleteTextView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <DatePicker
+            android1:id="@+id/datePicker1"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content" />
+
+        <TimePicker
+            android1:id="@+id/timePicker1"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content" />
+
+        <Button
+            android1:id="@+id/button2"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="设置日期" />
+
+        <Button
+            android1:id="@+id/button3"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="设置时间" />
+
+    </LinearLayout>
+
+</ScrollView>
